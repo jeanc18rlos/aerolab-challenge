@@ -1,0 +1,58 @@
+// Header
+header{
+  z-index: 110;
+  box-shadow: $header-shadow;
+  position: sticky;
+  top: 0;
+  display: flex !important;
+  align-items: center;
+  padding: .5vw 1.7vw !important;
+  background-color: $white;
+  justify-content: space-between;
+  min-height: 80px;
+  transform: translate3d(0, 0, 0);
+  transition: $hide-header-transition;
+  will-change: transform;
+
+  &.hidden {
+    transform: translate3d(0, -80px, 0);
+  }
+  li{
+    list-style: none;
+    &:last-child{
+      margin-left: auto;
+    }
+  }
+  .logo{
+    width:39px;
+    height:36px;
+  }
+  .user-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size:$font-md;
+    color: $main-color;
+    letter-spacing: $ls-lg;
+    line-height: $lh-md;
+    .user-name{
+      margin-right: 31px;
+      text-align:left;
+    }
+    .user-credits{
+      background: $light-gray;
+      border-radius:100px;
+      width:103px;
+      height:48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align:left;
+      img{
+        padding-left: 3px;
+        width: 30px;
+      }
+    }
+  }
+  
+}

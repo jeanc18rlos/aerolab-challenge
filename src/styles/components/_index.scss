@@ -1,0 +1,159 @@
+/*
+  Parallax
+*/
+
+.parallax-banner {
+  height: 66vh !important;
+  background: $blue-grad-full;
+
+  h1 {
+    position: absolute;
+    bottom: 0;
+    text-shadow: $text-shadow;
+    color: $white;
+    font-weight: bold;
+    left: 1.5rem;
+    font-size: $font-xl;
+    z-index: 101;
+  }
+
+  .parallax-banner-layer-2,
+  .parallax-banner-layer-1,
+  .parallax-banner-layer-3,
+  .parallax-banner-layer-4,
+  .parallax-banner-layer-0 {
+    background-repeat: no-repeat !important;
+    background-position: top right !important;
+    background-size: auto 100% !important;
+  }
+
+  .parallax-banner-layer-0 {
+    z-index: 99;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end
+  }
+
+  #layer-1-parallax-1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 4vw;
+    padding-right: 3vw;
+    >img{
+      filter: $parallax-shadow;
+      transform: rotate(34deg)
+    }
+  }
+}
+
+@media only screen and (orientation : portrait) {
+  .parallax-banner h1 {
+    left: 5rem;
+  }
+}
+
+@media only screen and (max-height:850px) and (orientation : portrait) {
+  .parallax-banner {
+    height: calc(100vh - 80px) !important;
+
+    #layer-1-parallax-1 {
+      padding-top: 16vw !important;
+      padding-right: 0 !important;
+      margin-right: -30vw !important;
+    }
+  }
+
+  .parallax-banner h1 {
+    left: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:850px) and (orientation : landscape) {
+  .parallax-banner {
+    height: calc(100vh - 80px) !important;
+
+    #layer-1-parallax-1 {
+      padding-top: 20vw !important;
+      padding-right: 0 !important;
+      margin-right: 0 !important;
+
+      img {
+        position: absolute;
+        width: 70%;
+        bottom: -15%;
+      }
+    }
+  }
+
+  .parallax-banner h1 {
+    left: 1.5rem;
+  }
+}
+
+/*
+  end of parallax
+*/
+
+/*
+  navigation-bar
+*/
+@media only screen and (max-width: 1150px){
+  ul.nav-filters{
+    li{
+      &:last-of-type{
+        margin: 5% auto;
+        width: 100%
+      }
+  }
+}
+}
+@media only screen and (orientation : portrait){
+  ul.nav-filters{
+
+    hr{
+      margin-top: 1rem !important
+    }
+    li{
+      margin: 2% auto !important;
+      justify-content: center !important;
+      display: flex !important;
+      &:last-of-type{
+        justify-content: space-evenly !important;
+        margin: 5% auto;
+        width: 100%
+      }
+      &.products-count{
+        border-right: none !important;
+        width: 100%;
+        text-align:center;
+      }
+      &.filter-label{
+        width: 100%;
+        text-align:center;
+      }
+    }
+  }
+}
+
+@media only screen  and (max-width:850px) and (orientation : landscape){
+  ul.nav-filters{
+
+    hr{
+      margin-top: 1rem !important
+    }
+    li{
+      &:last-of-type{
+        margin: 5% auto;
+        width: 100%
+      }
+      &.products-count{
+        width: 100%;
+        text-align:center;
+      }
+      &.filter-label{
+        width: 100%;
+        text-align:center;
+      }
+    }
+  }
+}

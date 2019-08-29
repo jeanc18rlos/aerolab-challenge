@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap);
+
+$main-font:       "Source Sans Pro",sans-serif;
+
+// Font size
+$font-xxs:        14px;
+$font-xs:         16px;
+$font-sm:         18px;
+$font-md:         24px;
+$font-lg:         36px;
+$font-xl:         64px;
+
+// Line Height
+$lh-default:      auto !default;
+$lh-md:           48px;
+
+// Letter Spacing
+$ls-xs:           -0.03px;
+$ls-sm:           -0.08px;
+$ls-md:           -0.04px;
+$ls-lg:           -0.15px;
+
+// Font-weight
+$weight-bold:     bold;
+$normal:          normal !default;
