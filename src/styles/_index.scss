@@ -10,13 +10,14 @@ button:focus {
 }
 
 html {
-  font-family: $main-font;
+  font-family: $main-font !important;
   scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  font-family: $main-font !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
